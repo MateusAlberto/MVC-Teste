@@ -37,7 +37,7 @@ namespace ProjetoTeste
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<ProjetoTesteContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("ProjetoTesteContext")));
+                    options.UseMySql(Configuration.GetConnectionString("ProjetoTesteContext"), builder => builder.MigrationsAssembly("ProjetoTeste")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
