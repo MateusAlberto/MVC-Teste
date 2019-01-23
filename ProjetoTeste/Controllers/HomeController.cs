@@ -12,12 +12,14 @@ namespace ProjetoTeste.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["Message"] = "Bacon é bom demais cara!";
             return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Sales Web MVC App from C# Course";
+            ViewData["Aluno"] = "Mateus Doooorna";
 
             return View();
         }
